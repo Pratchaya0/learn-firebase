@@ -8,6 +8,7 @@ import {
   listAll,
   list,
   UploadResult,
+  uploadBytesResumable,
 } from "firebase/storage";
 import { storege } from "./firebase/firebase";
 import { v4 } from "uuid";
@@ -24,7 +25,7 @@ export default function Home() {
     console.log("upload epub");
     if (epubUpload == null) return;
 
-    const epubRef = ref(storege, `epubs/${v4()}`);
+    const epubRef = ref(storege, `epubs/${v4()}.epub`);
     uploadBytes(epubRef, epubUpload).then((url) => {
       setEpubUrls((prev) => [...prev, url]);
     });
@@ -56,9 +57,9 @@ export default function Home() {
         />
         <button onClick={uploadEpub}>Upload</button>
       </div>
-      {epubUrls.map((url) => {
+      {/* {epubUrls.map((url) => {
         return <div key={url}>{url}</div>;
-      })}
+      })} */}
       <div style={{ height: "100vh" }}>
         <ReactReader
           // url="https://firebasestorage.googleapis.com/v0/b/learn-firebase-768a9.appspot.com/o/epubs%2F203cc94d-6f5c-440d-ae01-e92ba9a8b8e2?alt=media&token=4456eb6f-008d-4acc-a42a-b4b4939173bf"
