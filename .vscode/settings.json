@@ -6,6 +6,7 @@
         "firebasestorage",
         "googleusercontent",
         "storege",
-        "tailwindcss"
+        "tailwindcss",
+        "Zustand"
     ]
 }
