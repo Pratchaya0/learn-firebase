@@ -64,7 +64,10 @@ export default function Home() {
         <ReactReader
           // url="https://firebasestorage.googleapis.com/v0/b/learn-firebase-768a9.appspot.com/o/epubs%2F203cc94d-6f5c-440d-ae01-e92ba9a8b8e2?alt=media&token=4456eb6f-008d-4acc-a42a-b4b4939173bf"
           // url="https://react-reader.metabits.no/files/alice.epub"
-          url="https://firebasestorage.googleapis.com/v0/b/learn-firebase-768a9.appspot.com/o/epubs%2F5f0b98c0-658b-423c-a2fc-d279beb0b896?alt=media&token=f49e5421-6318-4f19-bfd4-8c26fe422381"
+          // url="https://firebasestorage.googleapis.com/v0/b/learn-firebase-768a9.appspot.com/o/epubs%2F5f0b98c0-658b-423c-a2fc-d279beb0b896?alt=media&token=f49e5421-6318-4f19-bfd4-8c26fe422381"
+          url={
+            "https://files.edgestore.dev/u57kfmj7qdlw6rtr/publicFiles/_public/e06af3f5-b15f-4ea4-a640-bf0b0ed50dea.epub"
+          }
           title="test"
           epubInitOptions={{
             openAs: "epub",
