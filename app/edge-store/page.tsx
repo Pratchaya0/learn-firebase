@@ -15,8 +15,6 @@ export default function EdgeStorePage() {
           console.log(progress);
         },
       });
-      // you can run some server action or api here
-      // to add the necessary data to your database
       console.log(res);
     }
   };
@@ -32,6 +30,7 @@ export default function EdgeStorePage() {
       <button
         onClick={async () => {
           if (file) {
+            console.log(file)
             const res = await edgestore.publicFiles.upload({
               file,
               onProgressChange: (progress) => {
